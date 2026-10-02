@@ -1,0 +1,10 @@
+{
+  "description": "Generate and customize QR codes with live previews, presets, and recent history in a user-friendly, responsive interface optimized for all devices.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
