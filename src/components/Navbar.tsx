@@ -28,7 +28,7 @@ export function Navbar({ dark, onToggleTheme }: NavbarProps) {
 
       <div className="flex items-center gap-2">
         <a
-          href="https://github.com/Prachi-0107/Design-QRCraft-Web-App"
+          href="https://github.com/Prachi-0107/qrcraft"
           target="_blank"
           rel="noopener noreferrer"
           className="button secondary text-xs flex items-center gap-1.5 py-1.5 px-3 rounded-lg"
