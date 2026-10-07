@@ -284,3 +284,407 @@ button { cursor: pointer; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* ==========================================================================
+   QRCraft Pro Component Styles
+   ========================================================================== */
+
+.type-selector-bar {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 4px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  scrollbar-width: thin;
+}
+
+.type-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 9px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all .15s ease;
+}
+
+.type-tab-btn:hover {
+  color: var(--text);
+  background: var(--surface-3);
+}
+
+.type-tab-btn.selected {
+  background: var(--surface);
+  color: var(--blue);
+  box-shadow: 0 2px 8px rgba(27, 48, 80, 0.08);
+}
+
+.quick-badge-btn {
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  font-family: monospace;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  color: var(--blue);
+  transition: all .15s ease;
+}
+
+.quick-badge-btn:hover {
+  background: var(--blue-soft);
+  border-color: var(--blue);
+}
+
+.country-select {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Custom Switch Toggle */
+.switch-track {
+  width: 36px;
+  height: 20px;
+  border-radius: 20px;
+  background: var(--surface-3);
+  padding: 2px;
+  transition: background .2s ease;
+  position: relative;
+}
+
+.switch-track.active {
+  background: var(--blue);
+}
+
+.switch-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  transition: transform .2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.switch-track.active .switch-thumb {
+  transform: translateX(16px);
+}
+
+/* Shape selection buttons */
+.shape-select-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 4px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-2);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--muted);
+  transition: all .15s ease;
+}
+
+.shape-select-btn:hover {
+  border-color: var(--line-strong);
+  color: var(--text);
+}
+
+.shape-select-btn.active {
+  border-color: var(--blue);
+  background: var(--blue-soft);
+  color: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue);
+}
+
+.shape-glyph {
+  width: 16px;
+  height: 16px;
+  background: currentColor;
+}
+
+.shape-glyph.dot-square { border-radius: 0; }
+.shape-glyph.dot-rounded { border-radius: 4px; }
+.shape-glyph.dot-dots { border-radius: 50%; }
+.shape-glyph.dot-classy { border-radius: 0 8px 0 8px; }
+.shape-glyph.dot-classy-rounded { border-radius: 8px 0 8px 0; }
+.shape-glyph.dot-extra-rounded { border-radius: 7px; }
+
+.corner-frame-glyph {
+  width: 18px;
+  height: 18px;
+  border: 3px solid currentColor;
+  background: transparent;
+}
+.corner-frame-glyph.frame-square { border-radius: 0; }
+.corner-frame-glyph.frame-extra-rounded { border-radius: 6px; }
+.corner-frame-glyph.frame-dot { border-radius: 50%; }
+
+.corner-dot-glyph {
+  width: 12px;
+  height: 12px;
+  background: currentColor;
+}
+.corner-dot-glyph.dot-square { border-radius: 0; }
+.corner-dot-glyph.dot-dot { border-radius: 50%; }
+
+/* Error correction cards */
+.ecc-card-btn {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  transition: all .15s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.ecc-card-btn:hover {
+  border-color: var(--line-strong);
+}
+
+.ecc-card-btn.active {
+  border-color: var(--blue);
+  background: var(--blue-soft);
+  color: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue);
+}
+
+/* Upload & Logo */
+.upload-drop-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px dashed var(--line-strong);
+  border-radius: 12px;
+  background: var(--surface-2);
+  transition: all .15s ease;
+}
+
+.upload-drop-btn:hover {
+  border-color: var(--blue);
+  background: var(--blue-soft);
+}
+
+.upload-icon-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--surface);
+  display: grid;
+  place-items: center;
+  color: var(--blue);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.logo-preset-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 6px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  transition: all .15s ease;
+}
+
+.logo-preset-btn:hover {
+  border-color: var(--line-strong);
+}
+
+.logo-preset-btn.selected {
+  border-color: var(--blue);
+  background: var(--blue-soft);
+  box-shadow: 0 0 0 1px var(--blue);
+}
+
+/* Pro Presets Cards */
+.preset-card-pro {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px;
+  background: var(--surface-2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  transition: all .15s ease;
+}
+
+.preset-card-pro:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.preset-card-pro.selected {
+  border-color: var(--blue);
+  background: var(--blue-soft);
+  box-shadow: 0 0 0 1px var(--blue);
+}
+
+.preset-check-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--blue);
+  display: grid;
+  place-items: center;
+}
+
+.preset-preview-mini {
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+}
+
+.preset-preview-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+/* History Cards */
+.recent-card-pro {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface-2);
+  padding: 12px;
+  transition: all .15s ease;
+}
+
+.recent-card-pro:hover {
+  border-color: var(--line-strong);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+}
+
+/* Preview Pro */
+.preview-card-pro {
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.qr-stage-pro {
+  aspect-ratio: 1;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  background-color: var(--surface-2);
+  background-image: 
+    linear-gradient(45deg, var(--surface-3) 25%, transparent 25%), 
+    linear-gradient(-45deg, var(--surface-3) 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, var(--surface-3) 75%), 
+    linear-gradient(-45deg, transparent 75%, var(--surface-3) 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.qr-render-box canvas, .qr-render-box svg {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* Scannability Badges */
+.reliability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.reliability-badge i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.reliability-badge.excellent {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+}
+
+.reliability-badge.good {
+  color: #059669;
+  background: rgba(5, 150, 105, 0.12);
+}
+
+.reliability-badge.risky {
+  color: #d97706;
+  background: rgba(217, 119, 6, 0.12);
+}
+
+.reliability-badge.poor {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.12);
+}
+
+/* Toast Pro */
+.toast-pro {
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px 10px 12px;
+  border-radius: 12px;
+  background: var(--text);
+  color: var(--surface);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.28);
+  font-size: 12px;
+  font-weight: 600;
+  animation: toast-in .25s ease-out;
+}
+
+.toast-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: #10b981;
+  color: white;
+}
+
+.toast-pro.info .toast-icon {
+  background: var(--blue);
+}
+
+.toast-pro.error .toast-icon {
+  background: #ef4444;
+}
